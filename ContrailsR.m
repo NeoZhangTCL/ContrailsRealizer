@@ -1,46 +1,41 @@
 function ContrailsR()
 
 I = imread('pers2.jpg');
-%I = rgb2gray(I);
-contractImage(I);
+imageOutput = contractImage(I,1.3,2);
 
+figure
+imshow(I);
+
+figure
+imshow(imageOutput);
+print output.jpg -djpeg
 
 end
 
-function contractImage(imageInput)
+function[imageOutput] = contractImage(imageInput, lowPara, HighPara)
 
 imageSize = size(imageInput);
 garyValue = garyscale(imageInput);
 
 length = imageSize(1);
 width = imageSize(2);
-garyAverage = mean(mean(garyValue))*1.3;
-
-%map = java.util.HashMap;
-%color = 67;
-%location = [1 2];
-%map.put(color, location);
-
-%answer = map.get(67);
+garyLow = mean(mean(garyValue))*lowPara;
+garyHigh = mean(mean(garyValue))*HighPara;
 
 for i = 1:length
     for j = 1:width
-      
-        if (garyValue(i,j)<garyAverage)
-            imageInput(i,j,1)=0; 
-            imageInput(i,j,2)=0; 
-            imageInput(i,j,3)=0; 
+        if (garyValue(i,j)<garyLow||garyValue(i,j)>garyHigh)
+            imageOutput(i,j,1)=0; 
+            imageOutput(i,j,2)=0; 
+            imageOutput(i,j,3)=0; 
         else
-            imageInput(i,j,1)=255; 
-            imageInput(i,j,2)=255; 
-            imageInput(i,j,3)=255; 
+            imageOutput(i,j,1)=255; 
+            imageOutput(i,j,2)=255; 
+            imageOutput(i,j,3)=255; 
         end
     end
 end
 
-figure
-imshow(imageInput);
-print output.jpg -djpeg
 end
 
 function [intensity] = garyscale(imageInput)
