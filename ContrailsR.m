@@ -1,6 +1,6 @@
 function ContrailsR()
 
-I = imread('figure.jpg');
+I = imread('pers2.jpg');
 imageOutput = contractImage(I,1.2,1.35);
 
 figure
