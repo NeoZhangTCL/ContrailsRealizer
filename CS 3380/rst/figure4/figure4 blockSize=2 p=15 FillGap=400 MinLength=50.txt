@@ -1,0 +1,5 @@
+threshold=1.168697
+number of edgel positions with no lines=1
+number of non-zero residual values=630880
+number of image pixels=5106960
+the program running time is  137.66
