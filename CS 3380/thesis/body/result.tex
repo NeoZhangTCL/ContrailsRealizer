@@ -1,0 +1,20 @@
+\chapter{Result}
+
+\section{Best Result and Parameters}
+\subsection{figure1}
+
+
+\section{Discussion}
+
+
+\section{Effect of Parameters}
+
+
+
+\section{Problems}
+This project solution still has some problems:
+\begin{enumerate}
+\item Some parameters need to be manually set if the best result is to be obtained, such as the canny edge threshold; the block size; the r value threshold; and Hough Transform minimum length, minimum gap, line numbers. Otherwise, the results would surprise some details when processing the multiple contrails images.
+\item The images with multiple contrails that cross each other will be not be processed well because some blocks which have multiple contrails image cross each other might be deleted because of too large r value.
+\item Super large image will be processed very slow because of the pixel by pixel processing algorithm. For example, figure4’s size is 2768 x 1845, and it took 1902 seconds (31.7 minutes) to process it (details see this project package /rst/figure4.txt). 
+\end{enumerate}
