@@ -1,0 +1,17 @@
+\chapter{Conclusion}
+
+This project is designed to recognize the contrails from clouds image. Using canny edge detection, polynomial curve fitting, and Hough Transform to solve this problem. \\
+
+The result is optimistic. Even we do not have a perfect result, I believe if we try have a much better gradient parameters (such as the block size from 5..10..15 to 5,6,7.., 14, 15), we can get a better results.\\
+
+Following the algorithms below:
+\begin{enumerate}
+    \item Grayscale the original image
+    \item Use canny edge detection to get the edge
+    \item By getting the small blocks pixel by pixel, and do the polynomial curve fitting to get the small line information
+    \item Put pixels survive the block processes into a new image
+    \item Do the Hough Transform on new image
+    \item Plot the results
+\end{enumerate}
+From the results, it can be seen that the problem has been fairly solved. However, still, some problems exist, such as parameters setting, data miss deleted, and time issues.\\
+We can still do some further research on solving this problem, for example, making the program more efficient or easier to use.

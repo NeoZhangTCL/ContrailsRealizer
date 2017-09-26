@@ -1,13 +1,21 @@
 \chapter{Conclusion}
 
-This project is designed to recognize the contrails from clouds image. Using canny edge detection, polynomial curve fitting, and Hough Transform to solve this problem. Following the algorithms below:
+This project is designed to recognize the contrails from clouds image. Using 
+Canny edge detection, polynomial curve fitting, and the Hough Transform (all
+via MatLab) we have proposed a solution to problem. The algorithms we developed are:
 \begin{enumerate}
-\item Grayscale the original image
-\item Use canny edge detection to get the edge
-\item By getting the small blocks pixel by pixel, and do the polynomial curve fitting to get the small line information
-\item Put pixels survive the block processes into a new image
-\item Do the Hough Transform on new image
-\item Plot the results
+\item Convert the original image to grayscale,
+\item Use the Canny edge detector to compute edge maps,
+\item Processing small blocks edgel by edgel and performing polynomial curve fitting 
+to obtain the best small line fit in each block and then thresholding edgels 
+based on the residual of the line fit,
+\item Placing edgels that survive this residual thresholding into into a new image,
+\item Performing a Hough Transform on new edgel image to extract significant lines and
+\item Plotting the results.
 \end{enumerate}
-From the results, it can be seen that the problem has been fairly solved. However, still, some problems exist, such as parameters setting, data miss deleted, and time issues.\\
-We can still do some further research on solving this problem, for example, making the program more efficient or easier to use.
+From the results, it can be seen that the problem has been fairly well solved. 
+However, some problems still exist, such as parameters setting, good data that 
+was missed or deleted, and computational time issues.
+
+We can still do some further research on solving this problem, for example, 
+making the program more efficient or easier to use.

@@ -9,19 +9,26 @@
 \contentsline {section}{\numberline {3.2}MatLab Methods}{6}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Canny Edge Detection}{6}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Polynomial curve fitting}{7}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Hough Transform and Hough Line Transform}{7}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.3}Hough Transform and Hough Line Transform\cite {Wikipedia}}{7}{subsection.3.2.3}
 \contentsline {subsection}{\numberline {3.2.4}Median Filter}{8}{subsection.3.2.4}
-\contentsline {section}{\numberline {3.3}Algorithm to reduce the bad edgels}{8}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Describe}{8}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Pseudo code}{9}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.3}Algorithm to Reduce the Number of Bad Edgels}{9}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Pseudo code}{9}{subsection.3.3.1}
 \contentsline {chapter}{\numberline {4}Result}{11}{chapter.4}
-\contentsline {section}{\numberline {4.1}Best Result and Parameters}{11}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}figure1}{11}{subsection.4.1.1}
-\contentsline {section}{\numberline {4.2}Discussion}{11}{section.4.2}
-\contentsline {section}{\numberline {4.3}Effect of Parameters}{11}{section.4.3}
-\contentsline {section}{\numberline {4.4}Problems}{11}{section.4.4}
-\contentsline {chapter}{\numberline {5}Future Work}{13}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusion}{15}{chapter.6}
-\contentsline {chapter}{\numberline {A}The first appendix}{17}{appendix.A}
-\contentsline {chapter}{\numberline {B}The Second appendix}{19}{appendix.B}
-\contentsline {chapter}{thanks}{21}{appendix.B}
+\contentsline {section}{\numberline {4.1}How to evaluate}{11}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Detect Rules}{11}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Parameters Definition}{11}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}Results and Discussion}{12}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Satellite Image}{13}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Contrails in Trees and Sky Image}{18}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Clear Sky with Contrails}{23}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}Aerial Image}{28}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}Line of Trees and Open Sky}{33}{subsection.4.2.5}
+\contentsline {section}{\numberline {4.3}Effect of Parameters}{38}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Block Radius}{38}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Percentage to Retain}{38}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Fill Gap}{38}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}Minimum Length}{38}{subsection.4.3.4}
+\contentsline {section}{\numberline {4.4}Problems}{39}{section.4.4}
+\contentsline {chapter}{\numberline {5}Future Work}{41}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusion}{43}{chapter.6}
+\contentsline {chapter}{thanks}{46}{chapter*.24}

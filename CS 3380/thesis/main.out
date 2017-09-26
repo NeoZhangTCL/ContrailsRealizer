@@ -9,19 +9,26 @@
 \BOOKMARK [1][-]{section.3.2}{MatLab Methods}{chapter.3}% 9
 \BOOKMARK [2][-]{subsection.3.2.1}{Canny Edge Detection}{section.3.2}% 10
 \BOOKMARK [2][-]{subsection.3.2.2}{Polynomial curve fitting}{section.3.2}% 11
-\BOOKMARK [2][-]{subsection.3.2.3}{Hough Transform and Hough Line Transform}{section.3.2}% 12
+\BOOKMARK [2][-]{subsection.3.2.3}{Hough Transform and Hough Line TransformWikipedia}{section.3.2}% 12
 \BOOKMARK [2][-]{subsection.3.2.4}{Median Filter}{section.3.2}% 13
-\BOOKMARK [1][-]{section.3.3}{Algorithm to reduce the bad edgels}{chapter.3}% 14
-\BOOKMARK [2][-]{subsection.3.3.1}{Describe}{section.3.3}% 15
-\BOOKMARK [2][-]{subsection.3.3.2}{Pseudo code}{section.3.3}% 16
-\BOOKMARK [0][-]{chapter.4}{Result}{}% 17
-\BOOKMARK [1][-]{section.4.1}{Best Result and Parameters}{chapter.4}% 18
-\BOOKMARK [2][-]{subsection.4.1.1}{figure1}{section.4.1}% 19
-\BOOKMARK [1][-]{section.4.2}{Discussion}{chapter.4}% 20
-\BOOKMARK [1][-]{section.4.3}{Effect of Parameters}{chapter.4}% 21
-\BOOKMARK [1][-]{section.4.4}{Problems}{chapter.4}% 22
-\BOOKMARK [0][-]{chapter.5}{Future Work}{}% 23
-\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 24
-\BOOKMARK [0][-]{appendix.A}{The first appendix}{}% 25
-\BOOKMARK [0][-]{appendix.B}{The Second appendix}{}% 26
-\BOOKMARK [0][-]{appendix.B}{thanks}{}% 27
+\BOOKMARK [1][-]{section.3.3}{Algorithm to Reduce the Number of Bad Edgels}{chapter.3}% 14
+\BOOKMARK [2][-]{subsection.3.3.1}{Pseudo code}{section.3.3}% 15
+\BOOKMARK [0][-]{chapter.4}{Result}{}% 16
+\BOOKMARK [1][-]{section.4.1}{How to evaluate}{chapter.4}% 17
+\BOOKMARK [2][-]{subsection.4.1.1}{Detect Rules}{section.4.1}% 18
+\BOOKMARK [2][-]{subsection.4.1.2}{Parameters Definition}{section.4.1}% 19
+\BOOKMARK [1][-]{section.4.2}{Results and Discussion}{chapter.4}% 20
+\BOOKMARK [2][-]{subsection.4.2.1}{Satellite Image}{section.4.2}% 21
+\BOOKMARK [2][-]{subsection.4.2.2}{Contrails in Trees and Sky Image}{section.4.2}% 22
+\BOOKMARK [2][-]{subsection.4.2.3}{Clear Sky with Contrails}{section.4.2}% 23
+\BOOKMARK [2][-]{subsection.4.2.4}{Aerial Image}{section.4.2}% 24
+\BOOKMARK [2][-]{subsection.4.2.5}{Line of Trees and Open Sky}{section.4.2}% 25
+\BOOKMARK [1][-]{section.4.3}{Effect of Parameters}{chapter.4}% 26
+\BOOKMARK [2][-]{subsection.4.3.1}{Block Radius}{section.4.3}% 27
+\BOOKMARK [2][-]{subsection.4.3.2}{Percentage to Retain}{section.4.3}% 28
+\BOOKMARK [2][-]{subsection.4.3.3}{Fill Gap}{section.4.3}% 29
+\BOOKMARK [2][-]{subsection.4.3.4}{Minimum Length}{section.4.3}% 30
+\BOOKMARK [1][-]{section.4.4}{Problems}{chapter.4}% 31
+\BOOKMARK [0][-]{chapter.5}{Future Work}{}% 32
+\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 33
+\BOOKMARK [0][-]{chapter*.24}{thanks}{}% 34

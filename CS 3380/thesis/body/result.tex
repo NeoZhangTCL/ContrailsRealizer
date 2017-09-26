@@ -1,20 +1,202 @@
 \chapter{Result}
 
-\section{Best Result and Parameters}
-\subsection{figure1}
+\section{How to evaluate}
+For this project，we manually count the number of correct contails as groundtruth  and 
+evaluate the correctness of all results with different parameters. Here are the 
+rules we use to count the contrails and detected lines:
+\begin{enumerate}
+    \item the contrails and result lines are counted manually,
+    \item in the origin image and final output image, we only count the lines 
+          with clear borders,
+    \item if two lines are overlay each other and the angle between two 
+          lines are less than $5^{circ}$, we count it as one and
+    \item if the number of lines is more than 10 and hard to count, we count 
+          it as 10, The default maximum number of lines that can be detected 
+          is 10 in the Hough Transform in MatLab.
+\end{enumerate}
 
+\section{Results and Discussion}
 
-\section{Discussion}
+\subsection{Results for figure1}
+
+The first figure, which we call figure 1 is a satellite image with about 7 contrails, 
+with some easy to be recognized while others are relatively blurred and difficult 
+to detect. Correct results are difficult to be fully detected，with interference 
+of latitude/longitundial and border lines.
+The best result are found with parameters with block radius as 2, percentage 
+to keep as 15, a fill gap as 600, and minimum length of any of 25, 50 and 100. 
+We present the processed images below.
+
+\begin{center}
+{\small
+\begin{longtable}{| c | c | c | c | c | c | c | c | c |} \hline 
+Block & Percentage & FillGap & Minimum & Correct & Incorrect & Missingr & Correct & Incorrect \\ 
+Radius &  & & Length & Number & Number & Number & Rate & Rate \\ \hline
+ 2 & 15 & 600 & 50 & 3 & 5 & 4 & 42.86\% & 62.50\%   \\
+ 2 & 15 & 600 & 100 & 3 & 5 & 4 & 42.86\% & 62.50\%   \\
+ 2 & 15 & 600 & 25 & 3 & 5 & 4 & 42.86\% & 62.50\%   \\
+ 2 & 15 & 200 & 50 & 2 & 5 & 5 & 28.57\% & 71.43\%   \\
+ 2 & 15 & 200 & 100 & 2 & 5 & 5 & 28.57\% & 71.43\%   \\
+ 2 & 25 & 400 & 25 & 2 & 5 & 5 & 28.57\% & 71.43\%   \\
+ 2 & 25 & 400 & 50 & 2 & 5 & 5 & 28.57\% & 71.43\%   \\
+ 2 & 25 & 400 & 100 & 2 & 5 & 5 & 28.57\% & 71.43\%   \\
+ 2 & 15 & 400 & 25 & 2 & 6 & 5 & 28.57\% & 75.00\%   \\
+ 2 & 15 & 400 & 50 & 2 & 6 & 5 & 28.57\% & 75.00\%   \\
+ 2 & 15 & 400 & 100 & 2 & 6 & 5 & 28.57\% & 75.00\%   \\
+ 2 & 25 & 600 & 25 & 2 & 6 & 5 & 28.57\% & 75.00\%   \\
+ 2 & 25 & 600 & 50 & 2 & 6 & 5 & 28.57\% & 75.00\%   \\
+ 2 & 25 & 600 & 100 & 2 & 6 & 5 & 28.57\% & 75.00\%   \\
+ 2 & 15 & 200 & 25 & 2 & 7 & 5 & 28.57\% & 77.78\%   \\
+ 2 & 5 & 200 & 25 & 2 & 8 & 5 & 28.57\% & 80.00\%   \\
+ 2 & 5 & 200 & 50 & 2 & 8 & 5 & 28.57\% & 80.00\%   \\
+ 2 & 5 & 200 & 100 & 2 & 8 & 5 & 28.57\% & 80.00\%   \\
+ 2 & 5 & 400 & 25 & 2 & 9 & 5 & 28.57\% & 81.82\%   \\
+ 2 & 5 & 400 & 50 & 2 & 9 & 5 & 28.57\% & 81.82\%   \\
+ 2 & 5 & 400 & 100 & 2 & 9 & 5 & 28.57\% & 81.82\%   \\
+ 2 & 5 & 600 & 25 & 2 & 9 & 5 & 28.57\% & 81.82\%   \\
+ 2 & 5 & 600 & 50 & 2 & 9 & 5 & 28.57\% & 81.82\%   \\
+ 2 & 5 & 600 & 100 & 2 & 9 & 5 & 28.57\% & 81.82\%   \\
+ 2 & 25 & 200 & 50 & 2 & 9 & 5 & 28.57\% & 81.82\%   \\
+ 2 & 25 & 200 & 100 & 2 & 9 & 5 & 28.57\% & 81.82\%   \\
+ 2 & 25 & 200 & 25 & 2 & 10 & 5 & 28.57\% & 83.33\%   \\
+ 7 & 5 & 200 & 100 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 7 & 5 & 400 & 25 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 7 & 5 & 400 & 50 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 7 & 5 & 400 & 100 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 7 & 5 & 600 & 25 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 7 & 5 & 600 & 50 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 7 & 5 & 600 & 100 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 7 & 15 & 200 & 25 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 7 & 15 & 200 & 50 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 7 & 15 & 200 & 100 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 7 & 15 & 400 & 25 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 7 & 15 & 400 & 50 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+  7 & 15 & 400 & 100 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 7 & 15 & 600 & 25 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 7 & 15 & 600 & 50 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 7 & 15 & 600 & 100 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 7 & 25 & 200 & 25 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 7 & 25 & 200 & 50 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 7 & 25 & 200 & 100 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 7 & 25 & 400 & 25 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 7 & 25 & 400 & 50 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 7 & 25 & 400 & 100 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 7 & 25 & 600 & 25 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 7 & 25 & 600 & 50 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 7 & 25 & 600 & 100 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 12 & 5 & 200 & 25 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 12 & 5 & 200 & 50 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 12 & 5 & 200 & 100 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 12 & 5 & 400 & 25 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 12 & 5 & 400 & 50 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 12 & 5 & 400 & 100 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 12 & 5 & 600 & 25 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 12 & 5 & 600 & 50 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 12 & 5 & 600 & 100 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 12 & 15 & 200 & 25 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 12 & 15 & 200 & 50 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 12 & 15 & 200 & 100 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 12 & 15 & 400 & 25 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 12 & 15 & 400 & 50 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 12 & 15 & 400 & 100 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 12 & 15 & 600 & 25 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 12 & 15 & 600 & 50 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 12 & 15 & 600 & 100 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 12 & 25 & 200 & 25 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 12 & 25 & 200 & 50 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 12 & 25 & 200 & 100 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 12 & 25 & 400 & 25 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 12 & 25 & 400 & 50 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 12 & 25 & 400 & 100 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 12 & 25 & 600 & 25 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 12 & 25 & 600 & 50 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 12 & 25 & 600 & 100 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 7 & 5 & 200 & 25 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\
+ 7 & 5 & 200 & 50 & 0 & 1 & 7 & 0.00\% & 100.00\%   \\ \hline 
+\caption{Experimental results for Figure \ref{fig1}.}
+\label{tbl1}
+\end{longtable}
+}
+\end{center}
+
+Figure figure2 is a color image with one thin contrail which is easy to find. 
+However, there also exists clear border between the trees and the sky. Even 
+though the border is clear, their edges are not as straight as contrails.
+The best result occurs when parameters with the block radius $\neq 2$,
+all others can be counted as better, their correctness rate are 100\%, 
+and incorrect rate are 0\%. Here are the processed images of best result.
+
+\subsection{Results for figure3}
+
+Figure figure3 is a color image with 1 pixel thick contrails, which is easy 
+to realize, this contrail is wide enough to have 2 edges, one side is clear while
+the other side is relatively blurrier. Also, there is a tree in this image 
+which has a clear edge with sky.
+
+The best result occurs when parameters FillGap is not 200 and when the 
+BlockRadius is not 2, Percentage is not 5 and FillGap is not 400 and 600.
+Here are the processed images of best result.
+
+\subsection{Results for figure4}
+
+Figure figure4 is a colored aerial image with too many contrails, which are 
+difficult to be clearly recognized and counted. These contrails cross each 
+other and most of them are all thin and blurry. According to rule 4 above, 
+we count it as 10, because it is difficult to find out the actual number. 
+The best result has the parameters with block radius of 2, the percentage 
+to retain it is 15, the fill gap is 600 and the minimum length can be any of 
+25, 50 and 100. Here are the processed images of best result.
+
+\subsection{Results for figure5}
+
+Figure figure5 is a color image with about 3 contrails which are easy to detect
+There are an apparent road and some trees whose edges are close to the straight line. 
+
+The best result has the parameters with block radius of 12, percentage to retain
+of 15, fill gap of 200, and a minimum length of 100.
+
+Here are the processed images of best result.
 
 
 \section{Effect of Parameters}
 
+In this section, we discuss the effect of the parameters.
+
+\subsection{Block Radius}
+Block Radius is the size of blocks (neighbourhoods) in the process of 
+reducing bad edgels. According to our algorithm, for each edgel, we need 
+to check all the edgels around it within the block radius to see if there 
+is/are line(s) across this block.
+
+As in Computer Graphics, all lines are displayed by the joining small pieces 
+of line segments into longer lines. When the block radius is smaller, 
+there must be many blocks can pass the block process to be considered 
+that they are in a straight line. This can make us get more the possible lines. From graph most of the figure results, we can see when the block radius is smaller, indeed we can get higher correctness rate. However, if we have more blocks pass the algorithm, it means we filter less bad pixels, it also increase the incorrectness rate. Also, there actually exist a low threshold that make this program works, which seem to be 2, because it give us really bad results other than the contrail we need in figure 2. Also when the block size is larger, the average time to process will be longer. 
+nger lines
+
+\subsection{Percentage to keep}
+
+Percentage is the percentage of best blocks to keep in the final step of algorithm to reduce bad edgels. As I mentioned in 3.3.1, the less percentage will keep less block in the this step.
+The block with higher residual value will reminds on the top, thus what we deleted is the blocks less likely to be in the contrails or lines. However, if we have many enough blocks are in lines, a smaller percentage will erase small details of the image which can mislead final result. According to the table, I think 10\% is a good value for this process.
+
+\subsection{Fill Gap}
+Fill Gap is a build-in parameter in the Hough Transfer, if there are two line segments are in same slop but no parallel and their distance are less than Fill Gap, the Hough Transfer will concatenate two line segments and consider them as one line.\\
+This parameter will help we find better contrails. Because contrails are not strictly straight lines, there are pixels on contrails may not always lay on the same line. this parameter can help us avoid this kind of problem. Like image *.\\
+However, as long as the Hough Transfer cannot tell if the lines are break because the lines are slightly curved or there is actually lines in between. Thus it will also give us some bad concatenation results. \\
+FillGap should be set as property value to make sure it is not either too large or too small.
+
+
+\subsection{Minimum Length}
+
+Minimum Length is a build-in parameter in the Hough Transfer, only if the line segment is larger than a certain length (MinLength), then it will be considered. \\
+As mentioned in the FillGap, the curves are all made up by small line segments. This parameter is a so important one to make us do not need to see infinitely many line segments. But also, this should keep in a relative threshold of the image to make sure it is in property.
 
 
 \section{Problems}
+
 This project solution still has some problems:
 \begin{enumerate}
-\item Some parameters need to be manually set if the best result is to be obtained, such as the canny edge threshold; the block size; the r value threshold; and Hough Transform minimum length, minimum gap, line numbers. Otherwise, the results would surprise some details when processing the multiple contrails images.
+\item Parameters need to be manually set if the best result is to be obtained, such as the canny edge threshold; the block size; the r value threshold; and Hough Transform minimum length, minimum gap, line numbers. Otherwise, the results would surprise some details when processing the multiple contrails images.
 \item The images with multiple contrails that cross each other will be not be processed well because some blocks which have multiple contrails image cross each other might be deleted because of too large r value.
 \item Super large image will be processed very slow because of the pixel by pixel processing algorithm. For example, figure4’s size is 2768 x 1845, and it took 1902 seconds (31.7 minutes) to process it (details see this project package /rst/figure4.txt). 
 \end{enumerate}

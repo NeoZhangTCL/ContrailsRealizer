@@ -20,7 +20,16 @@
 \usepackage{graphicx}
 \usepackage{wrapfig}
 \usepackage{listings}
+\usepackage{amsmath,amsthm,amssymb,float,tabularx}
+\usepackage{grffile}
+\usepackage{graphicx}
+\usepackage{latexsym}
+\usepackage{algorithm}
+\usepackage{longtable}
 \usepackage[hidelinks]{hyperref}
+\usepackage{subcaption}
+\usepackage[a4paper,includeall,bindingoffset=0cm,margin=3cm, marginparsep=0cm,marginparwidth=0cm]{geometry}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Definition der Kopfzeile %%
@@ -104,7 +113,7 @@
 
   \begin{flushleft}
     \large First Viewer:  #7 \\[1mm]
-    \large Second Viewer:  #8 \\[1mm]    
+    \large Second Viewer:  #8 \\[1mm]
     \large Day of Oral test: #9\\
   \end{flushleft}
 
@@ -125,8 +134,8 @@
 
 
   \LMUTitle
-      {Towards Finding Contrails\\ in Cloud Images}              
-      {Tuochaolong Zhang}                       
+      {Towards Finding Contrails\\ in Cloud Images}
+      {Tuochaolong Zhang}
       {}                                        % Place of birth of the author
       {Computer Science}                        % Name of faculty
       {Western University 2016}                 % Place and year of creation
@@ -154,24 +163,17 @@
 
 
   \mainmatter\setcounter{page}{1}
-  \include{body/introduction}
-  \include{body/background}
-  \include{body/approach}
-  \include{body/result}
-  \include{body/future}
-  \include{body/conclusion}
-  \include{appendix}
-
+  \include{introduction}
+  \include{background}
+  \include{approach}
+  \include{result}
+  \include{future}
+  \include{conclusion}
 
   \backmatter
-  \include{bibliography}
+  \include{referrence}
   \markboth{}{}
 
-
   \include{thanks}
-
-
-  \include{curriculum vitae}
-
 
 \end{document}
